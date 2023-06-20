@@ -11,7 +11,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -29,14 +29,12 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="#">Karyawan</a>
-                <a class="collapse-item" href="#">Jaminan</a>
-                <a class="collapse-item" href="#">Layanan</a>
-                <a class="collapse-item" href="#">ICD</a>
-                <a class="collapse-item" href="#">Jadwal</a>
-                <a class="collapse-item" href="#">Karcis</a>
-                <a class="collapse-item" href="#">MR</a>
+                <a class="collapse-item" href="{{ route('karyawan.index') }}">Karyawan</a>
+                <a class="collapse-item" href="{{ route('jaminan.index') }}">Jaminan</a>
+                <a class="collapse-item" href="{{ route('layanan.index') }}">Layanan</a>
+                <a class="collapse-item" href="{{ route('icd.index') }}">ICD</a>
+                <a class="collapse-item" href="{{ route('karcis.index') }}">Karcis</a>
+                <a class="collapse-item" href="{{ route('mr.index') }}">MR</a>
             </div>
         </div>
     </li>
@@ -54,9 +52,9 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="#">Registrasi</a>
-                <a class="collapse-item" href="#">Periksa</a>
-                <a class="collapse-item" href="#">Pembayaran</a>
+                <a class="collapse-item" href="{{ route('registrasi.index') }}">Registrasi</a>
+                <a class="collapse-item" href="{{ route('periksa.index') }}">Periksa</a>
+                <a class="collapse-item" href="{{ route('pembayaran.index') }}">Pembayaran</a>
             </div>
         </div>
     </li>

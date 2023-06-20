@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalJaminan extends Model
 {
-    use HasFactory;
+    protected $table = 'ta_jaminan';
+    protected $primaryKey = 'jam_id';
 }

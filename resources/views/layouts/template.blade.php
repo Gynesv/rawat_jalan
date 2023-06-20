@@ -20,6 +20,12 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('resources/sources/css/sb-admin-2.css') }}" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    <link href="{{ asset('resources/sources/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+    @section('css')
+    @show
+
 </head>
 
 <body id="page-top">
@@ -64,7 +70,7 @@
 
                     <!-- POTONG CONTENT AWAL -->
 
-                    @include('layouts.content')
+                    @yield('content')
 
                     <!-- POTONG CONTENT AKHIR -->
 
@@ -110,10 +116,16 @@
 
     <!-- Page level plugins -->
     <script src="{{ asset('resources/sources/vendor/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('resources/sources/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('resources/sources/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('resources/sources/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('resources/sources/js/demo/chart-pie-demo.js') }}"></script>
+    <script src="{{ asset('resources/sources/js/demo/datatables-demo.js') }}"></script>
+
+    @section('js')
+    @show
 
 </body>
 
