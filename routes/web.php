@@ -46,16 +46,19 @@ route::group(['prefix' => 'jaminan', 'as' => 'jaminan.'], function () {
 route::group(['prefix' => 'layanan', 'as' => 'layanan.'], function () {
 
     route::get('/', [RajalLayananController::class, 'index'])->name('index');
+    route::get('/view', [RajalLayananController::class, 'view'])->name('view');
 });
 
 route::group(['prefix' => 'icd', 'as' => 'icd.'], function () {
 
     route::get('/', [RajalICDController::class, 'index'])->name('index');
+    route::get('/view', [RajalICDController::class, 'view'])->name('view');
 });
 
 route::group(['prefix' => 'karcis', 'as' => 'karcis.'], function () {
 
     route::get('/', [RajalKarcisController::class, 'index'])->name('index');
+    route::get('/view', [RajalKarcisController::class, 'view'])->name('view');
 });
 
 route::group(['prefix' => 'mr', 'as' => 'mr.'], function () {

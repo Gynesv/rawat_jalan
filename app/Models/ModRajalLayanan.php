@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalLayanan extends Model
 {
-    use HasFactory;
+    protected $table = 'ta_layanan';
+    protected $primaryKey = 'layanan_id';
 }

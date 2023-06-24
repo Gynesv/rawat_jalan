@@ -18,9 +18,10 @@
                 <thead>
                     <tr>
                         <th>No.</th>
-                        <th>Kode</th>
                         <th>Nama</th>
-                        <th>Perusahaan</th>
+                        <th>Tarif Registrasi</th>
+                        <th>Tarif Dokter</th>
+                        <th>Total</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -49,7 +50,7 @@
 
         $.ajax({
             type: 'GET',
-            url: "{{ route('jaminan.view') }}",
+            url: "{{ route('karcis.view') }}",
             dataType: 'JSON',
             async: true,
             success: function(result) {
@@ -62,10 +63,12 @@
 
                 if (data.length) {
                     for (i = 0; i < data.length; i++) {
+                        
                         var tr = $('<tr>').append([
                             $('<td width="10%" align="center">'),
                             $('<td width="20%">'),
-                            $('<td width="50%">'),
+                            $('<td width="20%">'),
+                            $('<td width="20%">'),
                             $('<td width="20%">'),
                             $('<td width="20%" align="center">')
                         ]);
@@ -73,15 +76,18 @@
                         tr.find('td:nth-child(1)').html((i + 1));
 
                         tr.find('td:nth-child(2)').append($('<div>')
-                            .html((data[i].jam_kode)));
+                            .html((data[i].karcis_nama)));
 
                         tr.find('td:nth-child(3)').append($('<div>')
-                        .html((data[i].jam_nama)));
+                            .html((data[i].karcis_tarif_regis)));
 
                         tr.find('td:nth-child(4)').append($('<div>')
-                            .html((data[i].jam_perusahaan)));
+                            .html((data[i].karcis_tarif_jasa_dokter)));
 
-                        tr.find('td:nth-child(5)').append('<div class="btn-group"><a href="javascript:;" class="btn btn-primary btn-icon-split item_edit" data="' +  data[i].jam_id + '"><i class="fa fa-edit"></i></a><a href="javascript:;" class="btn btn-danger btn-icon-split item_delete" data="' + data[i].jam_id + '"><i class="fa fa-trash"></i></a></div>');
+                        tr.find('td:nth-child(5)').append($('<div>')
+                            .html((data[i].total_karcis)));
+
+                        tr.find('td:nth-child(6)').append('<div class="btn-group"><a href="javascript:;" class="btn btn-primary btn-icon-split item_edit" data="' +  data[i].karcis_id + '"><i class="fa fa-edit"></i></a><a href="javascript:;" class="btn btn-danger btn-icon-split item_delete" data="' + data[i].karcis_id + '"><i class="fa fa-trash"></i></a></div>');
 
                         tr.appendTo($('#tabel_data'));
                     }

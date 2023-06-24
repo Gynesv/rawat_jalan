@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ModRajalIcd extends Model
+class ModRajalICD extends Model
 {
-    use HasFactory;
+    protected $table = 'ta_icd';
+    protected $primaryKey = 'icd_id';
 }
