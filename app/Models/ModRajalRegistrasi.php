@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalRegistrasi extends Model
 {
-    use HasFactory;
+    protected $table = 'simrs_tc_regirtasi';
+    protected $primaryKey = 'regis_id';
 }

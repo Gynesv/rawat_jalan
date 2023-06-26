@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalICD extends Model
 {
-    protected $table = 'ta_icd';
+    protected $table = 'simrs_ta_icd';
     protected $primaryKey = 'icd_id';
 }

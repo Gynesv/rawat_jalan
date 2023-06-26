@@ -10,7 +10,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -18,16 +18,15 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider">
-
-
-    <!-- Nav Item - Pages Collapse Menu -->
+ 
+    <!-- Nav Item - Data Master Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseMaster"
+            aria-expanded="true" aria-controls="collapseMaster">
             <i class="fas fa-fw fa-folder"></i>
             <span>Data Master</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseMaster" class="collapse" aria-labelledby="headingMaster" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('karyawan.index') }}">Karyawan</a>
                 <a class="collapse-item" href="{{ route('jaminan.index') }}">Jaminan</a>
@@ -40,18 +39,18 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    {{-- <hr class="sidebar-divider"> --}}
 
-
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Traksaksi Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Transaksi</span>
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTransaksi"
+            aria-expanded="true" aria-controls="collapseTransaksi">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Data Transaksi</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseTransaksi" class="collapse" aria-labelledby="headingTransaksi" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Transaksi:</h6>
                 <a class="collapse-item" href="{{ route('registrasi.index') }}">Registrasi</a>
                 <a class="collapse-item" href="{{ route('periksa.index') }}">Periksa</a>
                 <a class="collapse-item" href="{{ route('pembayaran.index') }}">Pembayaran</a>
@@ -63,7 +62,7 @@
     <hr class="sidebar-divider">
 
 
-    <!-- Nav Item - Charts -->
+    <!-- Nav Item - Manajemen User -->
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-fw fa-chart-area"></i>

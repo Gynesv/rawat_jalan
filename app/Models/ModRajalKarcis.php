@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalKarcis extends Model
 {
-    protected $table = 'tb_karcis';
+    protected $table = 'simrs_tb_karcis';
     protected $primaryKey = 'karcis_id';
 }

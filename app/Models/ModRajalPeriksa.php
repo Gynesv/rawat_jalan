@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalPeriksa extends Model
 {
-    use HasFactory;
+    protected $table = 'simrs_tc_periksa';
+    protected $primaryKey = 'periksa_id';
 }

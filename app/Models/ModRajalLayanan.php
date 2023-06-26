@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModRajalLayanan extends Model
 {
-    protected $table = 'ta_layanan';
+    protected $table = 'simrs_ta_layanan';
     protected $primaryKey = 'layanan_id';
 }
