@@ -41,6 +41,11 @@ route::group(['prefix' => 'jaminan', 'as' => 'jaminan.'], function () {
 
     route::get('/', [RajalJaminanController::class, 'index'])->name('index');
     route::get('/view', [RajalJaminanController::class, 'view'])->name('view');
+    route::post('/save', [RajalJaminanController::class, 'save'])->name('save');
+    route::get('/edit', [RajalJaminanController::class, 'edit'])->name('edit');
+    route::post('/update', [RajalJaminanController::class, 'update'])->name('update');
+    route::get('/aktif', [RajalJaminanController::class, 'aktif'])->name('aktif');
+    route::get('/nonaktif', [RajalJaminanController::class, 'nonaktif'])->name('nonaktif');
 });
 
 route::group(['prefix' => 'layanan', 'as' => 'layanan.'], function () {

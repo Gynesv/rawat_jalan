@@ -12001,6 +12001,15 @@ a:focus {
   justify-content: center;
 }
 
+.btn-icon-split-act {
+  padding: 1;
+  margin-right: 5px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
 .btn-icon-split .icon {
   background: rgba(0, 0, 0, 0.15);
   display: inline-block;

@@ -21,13 +21,14 @@
  
     <!-- Nav Item - Data Master Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseMaster"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaster"
             aria-expanded="true" aria-controls="collapseMaster">
             <i class="fas fa-fw fa-folder"></i>
             <span>Data Master</span>
         </a>
         <div id="collapseMaster" class="collapse" aria-labelledby="headingMaster" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
+                <h3 class="collapse-header">Custom Master:</h3>
                 <a class="collapse-item" href="{{ route('karyawan.index') }}">Karyawan</a>
                 <a class="collapse-item" href="{{ route('jaminan.index') }}">Jaminan</a>
                 <a class="collapse-item" href="{{ route('layanan.index') }}">Layanan</a>
@@ -43,7 +44,7 @@
 
     <!-- Nav Item - Traksaksi Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTransaksi"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTransaksi"
             aria-expanded="true" aria-controls="collapseTransaksi">
             <i class="fas fa-fw fa-folder"></i>
             <span>Data Transaksi</span>
@@ -64,7 +65,7 @@
 
     <!-- Nav Item - Manajemen User -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link collapsed" href="#">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Manajemen Users</span></a>
     </li>
